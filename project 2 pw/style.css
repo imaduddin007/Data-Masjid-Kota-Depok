@@ -1,0 +1,215 @@
+:root {
+    --secondary: #F7F7F7;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-width: 2px;
+}
+
+/* preloader */
+
+.preloader.flex-column.justify-content-center.align-items-center {
+    background-color: var(--primary)
+}
+
+/* aside navbar start============================ */
+.logout {
+    margin-top: auto;
+}
+
+.nav-sidebar {
+    height: 60vh;
+}
+
+.nav.nav-pills.flex-column {
+    flex-wrap: nowrap;
+}
+
+.os-viewport os-viewport-native-scrollbars-invisible os-viewport-native-scrollbars-overlaid {
+    flex-wrap: nowrap;
+}
+
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active,
+.sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active {
+    background-color: var(--primary);
+}
+
+[class*=sidebar-dark-] .nav-treeview>.nav-item>.nav-link.active,
+[class*=sidebar-dark-] .nav-treeview>.nav-item>.nav-link.active:focus,
+[class*=sidebar-dark-] .nav-treeview>.nav-item>.nav-link.active:hover {
+    background-color: var(--secondary);
+}
+
+/* icons */
+
+.nav-item-icons{
+    width: 25px;
+}
+
+
+/* aside navbar end========================= */
+
+/* card */
+.card-primary:not(.card-outline)>.card-header {
+    background-color: var(--primary);
+}
+
+/* form */
+
+.empty {
+    color: gainsboro;
+}
+
+/* radio */
+
+.draft, .pending {
+    --class-accent-color: var(--warning);
+}
+
+.submit {
+    --class-accent-color: #0069d9;
+}
+
+.review {
+    --class-accent-color: var(--info);
+}
+
+.reject, .denied {
+    --class-accent-color: var(--danger);
+}
+
+.approve, .approved {
+    --class-accent-color: var(--success);
+}
+
+input[type=radio] {
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    background-color: gainsboro;
+    border-radius: 50%;
+}
+
+input[type=radio]:checked::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;right: 0;top: 0;
+    background-color: var(--class-accent-color);
+}
+div.form-check label{
+    color: var(--class-accent-color);
+}
+div.form-check input[type=radio]:checked ~ label{
+    background-color: var(--class-accent-color);
+    color: white;
+    padding: 0 3px;
+    border-radius: 3px;
+}
+
+/* table */
+
+.card-header-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;flex-wrap: wrap;
+}
+
+table span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+table .detail {
+    color: var(--info);
+}
+
+table .edit {
+    color: var(--warning);
+}
+
+table .delete {
+    color: var(--danger);
+}
+
+
+.tambah {
+    width: fit-content;
+    display: flex;
+}
+
+.tambah button {
+    border-style: dashed;
+}
+
+
+/* tag table */
+.tag{
+    background-color: var(--class-accent-color);
+    color: white;
+    padding: 0 3px;
+    border-radius: 3px;
+}
+
+
+/* @media (prefers-color-scheme: dark){
+    .content-wrapper{
+        background-color: black;
+        color: white;
+    }
+    .card{
+        background-color: #393E46;
+    }
+    th{
+        background-color: rgb(90, 90, 90) !important;
+        color: #9bc0e7;
+    }
+
+    ::-webkit-scrollbar-thumb{
+        background-color: red;
+    }
+} */
+
+
+.dark-mode input:-webkit-autofill,
+.dark-mode input:-webkit-autofill:hover,
+.dark-mode input:-webkit-autofill:focus,
+.dark-mode textarea:-webkit-autofill,
+.dark-mode textarea:-webkit-autofill:hover,
+.dark-mode textarea:-webkit-autofill:focus,
+.dark-mode select:-webkit-autofill,
+.dark-mode select:-webkit-autofill:hover,
+.dark-mode select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  background-color: gray;
+}
+
+.dark-mode input:-webkit-autofill, .dark-mode input:-webkit-autofill:hover, .dark-mode input:-webkit-autofill:focus, .dark-mode input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #3f5969 inset !important;
+    -webkit-text-fill-color: #F7F7F7;
+}
+
+.dark-mode .main-header.navbar.navbar-expand.navbar-white.navbar-light{
+    background-color: #343a40;
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    cursor: pointer;
+    top: 10px;
+    right: 1vw;
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    z-index: 11;
+    background-image: url(../img/night.png);
+    background-size: 100%;
+    border: none;
+    border-radius: 50%;
+}
+
+
+
