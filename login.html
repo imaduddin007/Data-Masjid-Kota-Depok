@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Log in (v2)</title>
+  <title>Admin Masjid</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -15,63 +15,84 @@
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition login-page">
+<div class="d-flex justify-content-center mb-4 pt-5">
+  <h1 class="mx-auto text-center">Login Sistem Direktori Data Masjid</h1>
+</div>
 <div class="login-box">
+  <div class="card-header text-center">
+    <a href="index.html" class="h1"><b>Admin</b>Masjid</a>
+  </div>
   <!-- /.login-logo -->
-  <div class="card card-outline card-primary">
-    <div class="card-header text-center">
-      <a href="index.html" class="h1"><b>Admin</b>LTE</a>
-    </div>
-    <div class="card-body">
-      <p class="login-box-msg">Sign in to start your session</p>
-
-      <form action="#" method="post">
-        <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Username">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-envelope"></span>
-            </div>
-          </div>
+  <div class="d-flex justify-content-center">
+    <form class="mx-auto text-center"
+        style="border: 1px solid gray; padding: 25px; background-color: whitesmoke;">
+        <div class="form-group row">
+            <label for="username" class="col-sm-2 col-form-label">Username:</label>
+            <input type="text" class="form-control" id="username" name="username">
         </div>
-        <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-lock"></span>
-            </div>
-          </div>
+        <div class="form-group row">
+            <label for="password" class="col-sm-2 col-form-label">Password:</label>
+            <input type="password" class="form-control" id="password" name="password">
         </div>
         <div class="row">
-          <div class="col-8">
-            <div class="icheck-primary">
-              <input type="checkbox" id="remember">
-              <label for="remember">
-                Remember Me
-              </label>
-            </div>
-          </div>
-          <!-- /.col -->
-          <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
-          </div>
-          <!-- /.col -->
+            <a onclick="onLogin()" class="btn btn-primary mt-3 mr-3 col-6" id="login">Login</a> <a
+                href="register-admin.html" class="col-5 mt-4">Create User</a>
         </div>
-      </form>
-      <!-- /.social-auth-links -->
-
-      <p class="mb-1">
-        <a href="forgot-password.html">I forgot my password</a>
-      </p>
-      <p class="mb-0">
-        <a href="register-admin.html" class="text-center">Register a new membership</a>
-      </p>
-    </div>
-    <!-- /.card-body -->
-  </div>
+        <button type="button" class="btn btn-success mt-5" data-toggle="modal" data-target="#admin">Akun Admin</button>
+        <div class="modal fade" id="admin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 display-3" id="exampleModalLabel">Akun Admin</h1>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <h3 class="col-sm-6 display-6">Username :</h3>
+                            <h3 class="col-sm-6 display-6">admin</h3>
+                        </div>
+                        <div class="row">
+                            <h3 class="col-sm-6 display-6">Password :</h3>
+                            <h3 class="col-sm-6 display-6">admin123</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
   <!-- /.card -->
 </div>
-<!-- /.login-box -->
 
+<div class="container">
+  <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom border-dark pb-3 mb-3">
+      </ul>
+      <p class="text-center text-muted"><strong>Developed By</strong> Mahasiswa @STT-NF</p>
+  </footer>
+</div>
+<!-- /.login-box -->
+<script type="application/javascript">
+  let usernameInput = document.getElementById("username");
+  let passwordInput = document.getElementById("password");
+
+  function onLogin() {
+
+      if (username.value == "" || password.value == "") {
+          alert("Lengkapi form terlebih dahulu");
+      } else if (username.value == "admin" && password.value == "admin123") {
+          alert("Selamat datang kembali, Admin")
+          location.href = "daftar-masjid.html";
+      } else if (username.value == "admin" && password.value != "admin123") {
+          alert("Admin, Anda memasukkan password yang salah")
+      } else {
+          alert("Terimakasih sudah Login");
+          location.href = "data-berita.html";
+      }
+  }
+</script>
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
